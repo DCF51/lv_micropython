@@ -9,7 +9,7 @@ ifdef BOARD_DIR
 BOARD ?= $(notdir $(BOARD_DIR:/=))
 else
 # If not given on the command line, then default to GENERIC.
-BOARD ?= GENERIC
+BOARD ?= M5CORE2
 BOARD_DIR ?= boards/$(BOARD)
 endif
 
@@ -21,8 +21,8 @@ endif
 BUILD ?= build-$(BOARD)
 
 # Device serial settings.
-PORT ?= /dev/ttyUSB0
-BAUD ?= 460800
+PORT ?= /dev/tty.usbserial-56D40020061
+BAUD ?= 115200
 
 PYTHON ?= python3
 
